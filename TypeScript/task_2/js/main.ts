@@ -69,6 +69,22 @@ console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee("$500"));
 
+// String literal type for Subjects
+type Subjects = "Math" | "History";
+
+// Function to teach class based on subject
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else {
+    return "Teaching History";
+  }
+}
+
 // Test the new functions
 console.log(executeWork(createEmployee(200)));
 console.log(executeWork(createEmployee(1000)));
+
+// Test the teachClass function
+console.log(teachClass("Math"));
+console.log(teachClass("History"));
