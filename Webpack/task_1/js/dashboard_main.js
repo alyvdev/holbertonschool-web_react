@@ -16,8 +16,8 @@ $(function () {
   $('body').append('<p>Copyright - Holberton School</p>');
 
   let debouncedFunc = _.debounce(() => {
-    let count = updateCounter();
-    $('#count').text(`${count} clicks on the button`);
+    // updateCounter() increments the global count and returns the new value
+    $('#count').text(`${updateCounter()} clicks on the button`);
   }, 500);
   $('button').on('click', debouncedFunc);
 });
