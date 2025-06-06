@@ -2,6 +2,12 @@ button {
 	text-align: right;
 }
 
+#count {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
 button > span {
 	font-style:normal;
 	font-weight: bold;
