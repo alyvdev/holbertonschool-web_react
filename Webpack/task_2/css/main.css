@@ -12,5 +12,5 @@ button > span {
 	height: 200px;
 	background: url('../assets/holberton-logo.jpg');
 	background-position: center;
-	background-size: contain;
+	background-size: 200px 200px;
 }
