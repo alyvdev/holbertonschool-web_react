@@ -1,66 +1,63 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: {
-    header: './modules/header/header.js',
-    body: './modules/body/body.js',
-    footer: './modules/footer/footer.js'
+    header: "./modules/header/header.js",
+    body: "./modules/body/body.js",
+    footer: "./modules/footer/footer.js",
   },
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, './public')
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "./public"),
   },
   devServer: {
     port: 8564,
-    open: true
+    open: true,
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   optimization: {
     splitChunks: {
-      chunks: 'all'
-    }
+      chunks: "all",
+    },
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin()
-  ],
+  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
-          'file-loader',
+          "file-loader",
           {
-            loader: 'image-webpack-loader',
+            loader: "image-webpack-loader",
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 65
+                quality: 65,
               },
               optipng: {
                 enabled: false,
               },
               pngquant: {
-                quality: [0.65, 0.90],
-                speed: 4
+                quality: [0.65, 0.9],
+                speed: 4,
               },
               gifsicle: {
                 interlaced: false,
               },
               webp: {
-                quality: 75
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
+                quality: 75,
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
