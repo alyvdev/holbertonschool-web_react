@@ -20,13 +20,8 @@ module.exports = {
     },
   },
   plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()],
-  performance: {
-    hints: false,
-    maxAssetSize: 1000000,
-    maxEntrypointSize: 1000000,
-  },
   devServer: {
-    static: path.join(__dirname, "./public"),
+    contentBase: path.join(__dirname, "./public"),
     compress: true,
     port: 8564,
     open: true,
