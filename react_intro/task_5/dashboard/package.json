@@ -7,7 +7,6 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.0.2",
     "file-loader": "^6.2.0",
     "image-webpack-loader": "^7.0.1",
     "imagemin-gifsicle": "^7.0.0",
@@ -16,7 +15,8 @@
     "style-loader": "^2.0.0"
   },
   "scripts": {
-    "start": "webpack serve --mode development --config config/webpack.config.js",
+    "start": "npx --node-options=\"--openssl-legacy-provider\" webpack serve --mode development --config config/webpack.config.js",
+    "build": "npx --node-options=\"--openssl-legacy-provider\" webpack --config config/webpack.config.js",
     "test": "jest"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
     "chai": "^4.3.0",
+    "css-loader": "^6.5.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.1",
