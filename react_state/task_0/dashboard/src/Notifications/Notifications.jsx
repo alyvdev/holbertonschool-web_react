@@ -1,8 +1,8 @@
-import React from 'react';
-import { StyleSheet, css } from 'aphrodite';
-import closebtn from '../assets/close-button.png';
-import NotificationItem from './NotificationItem';
-import PropTypes from 'prop-types';
+import React from "react";
+import { StyleSheet, css } from "aphrodite";
+import closebtn from "../assets/close-button.png";
+import NotificationItem from "./NotificationItem";
+import PropTypes from "prop-types";
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -57,7 +57,9 @@ class Notifications extends React.Component {
 
             {notifications.length > 0 ? (
               <>
-                <p className={css(styles.panelText)}>Here is the list of notifications</p>
+                <p className={css(styles.panelText)}>
+                  Here is the list of notifications
+                </p>
                 <ul className={css(styles.ul)}>
                   {notifications.map((notification) => (
                     <NotificationItem
@@ -87,79 +89,79 @@ const fade = {
 };
 
 const bounce = {
-  '0%': { transform: 'translateY(0px)' },
-  '50%': { transform: 'translateY(-5px)' },
-  '100%': { transform: 'translateY(5px)' },
+  "0%": { transform: "translateY(0px)" },
+  "50%": { transform: "translateY(-5px)" },
+  "100%": { transform: "translateY(5px)" },
 };
 
 const styles = StyleSheet.create({
-  '@keyframes fade': fade,
-  '@keyframes bounce': bounce,
+  "@keyframes fade": fade,
+  "@keyframes bounce": bounce,
 
   menuItem: {
-    position: 'fixed',
+    position: "fixed",
     top: 0,
     right: 0,
-    backgroundColor: '#fff8f8',
-    padding: '10px',
-    cursor: 'pointer',
+    backgroundColor: "#fff8f8",
+    padding: "10px",
+    cursor: "pointer",
     zIndex: 1000,
-    ':hover': {
-      animationName: ['fade', 'bounce'],
-      animationDuration: '1s, 0.5s',
-      animationIterationCount: '3',
+    ":hover": {
+      animationName: ["fade", "bounce"],
+      animationDuration: "1s, 0.5s",
+      animationIterationCount: "3",
     },
   },
   menuText: {
     margin: 0,
   },
   panel: {
-    border: '2px dashed red',
-    padding: '10px',
-    width: '400px',
-    backgroundColor: '#fff8f8',
-    position: 'absolute',
+    border: "2px dashed red",
+    padding: "10px",
+    width: "400px",
+    backgroundColor: "#fff8f8",
+    position: "absolute",
     right: 0,
-    top: '2.5rem',
+    top: "2.5rem",
     zIndex: 1001,
-    '@media (max-width: 900px)': {
-      position: 'fixed',
+    "@media (max-width: 900px)": {
+      position: "fixed",
       top: 0,
       left: 0,
       right: 0,
       bottom: 0,
-      width: '100%',
-      height: '100%',
-      backgroundColor: 'white',
-      fontSize: '20px',
-      padding: '20px',
-      border: 'none',
+      width: "100%",
+      height: "100%",
+      backgroundColor: "white",
+      fontSize: "20px",
+      padding: "20px",
+      border: "none",
     },
   },
   panelText: {
-    fontSize: '16px',
-    '@media (max-width: 900px)': {
-      fontSize: '20px',
-      margin: '10px',
+    fontSize: "16px",
+    "@media (max-width: 900px)": {
+      fontSize: "20px",
+      margin: "10px",
     },
   },
   ul: {
-    listStyle: 'none',
+    listStyle: "none",
     padding: 0,
     margin: 0,
   },
   closeBtn: {
-    position: 'absolute',
-    top: '10px',
-    right: '10px',
-    border: 'none',
-    background: 'transparent',
-    cursor: 'pointer',
+    position: "absolute",
+    top: "10px",
+    right: "10px",
+    border: "none",
+    background: "transparent",
+    cursor: "pointer",
     zIndex: 1002,
   },
   closeIcon: {
-    width: '10px',
-    height: '10px',
+    width: "10px",
+    height: "10px",
   },
 });
 
